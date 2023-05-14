@@ -1,7 +1,7 @@
 
 
 import './App.css';
-import Aboutus from './components/Aboutus';
+//import Aboutus from './components/Aboutus';
 import Alert from './components/Alert';
 //import Aboutus from './components/Aboutus';
 import Navbar from './components/Navbar';
@@ -9,11 +9,11 @@ import Textforms from './components/Textforms';
 import React, { useState } from 'react';
 
 
-import {
-  BrowserRouter as Router,
-  Routes,
-  Route,
-} from "react-router-dom";
+//import {
+  //BrowserRouter as Router,
+ // Routes,
+  //Route,
+//} from "react-router-dom";
 
 
 
@@ -45,19 +45,19 @@ function App() {
   }
   return (
   <>
-    <Router>
+
       <Navbar title="TextUtils" aboutText="About us" mode={mode} toggleMode={toggleMode}/>
       <Alert alert={alert}/>
       <div className="container my-3">
-        <Routes>
+      <Textforms showAlert={showAlert} heading="TextModifier-word counter | character counter | remove extra spaces" mode={mode}/>
+       {/*<Routes>
           <Route path="/about" element={<Aboutus/>}>
           </Route>
           <Route path="/" element={<Textforms showAlert={showAlert} heading="TextModifier-word counter | character counter | remove extra spaces" mode={mode}/>
 }>          </Route>
-        </Routes>  
+</Routes>  */}
       </div>
-
-    </Router>
+  
   </>
   );
 }
